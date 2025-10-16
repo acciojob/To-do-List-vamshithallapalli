@@ -1,15 +1,13 @@
 //your code here
 const input = document.getElementById('newTodoInput');
-const addBtn = document.getElementById('addTodoBtn');
+const button = document.getElementById('addTodoBtn');
 const todoList = document.getElementById('todoList');
 
-addBtn.addEventListener('click', function(){
+button.addEventListener('click', function(){
 	const newTodo = input.value.trim();
 
-	if(newTodo === ""){
-		alert("Please enter a todo item before adding!");
-        return;
-	}
+	if(newTodo === "") return;
+	
 
 	const li = document.createElement('li');
 	li.textContent = newTodo;
